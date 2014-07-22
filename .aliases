@@ -1,0 +1,36 @@
+# Easier navigation: .., ..., ~ and -
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+
+# List all files colorized in long format
+alias l="ls -l"
+
+# List all files colorized in long format, including dot files
+alias la="ls -la"
+alias ll="ls -al"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Shortcuts
+alias g="git"
+alias gs="git status"
+alias gl="git log"
+alias v="vim"
+
+# File size
+alias fs="stat -f \"%z bytes\""
