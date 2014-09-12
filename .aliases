@@ -34,3 +34,6 @@ alias v="vim"
 
 # File size
 alias fs="stat -f \"%z bytes\""
+
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l logfile start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres -l logfile stop"
