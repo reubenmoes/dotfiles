@@ -1,6 +1,3 @@
-[user]
-	name = Reuben Moes
-	email = reubenmoes@gmail.com
 [core]
 	autocrlf = false
 	safecrlf = true
