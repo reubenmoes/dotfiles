@@ -13,6 +13,7 @@
   s = status -s
   df = diff --color --color-words --abbrev
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold white)<%an>%Creset' --abbrev-commit --
+  undo = reset --hard HEAD~1
 [color]
   ui = always
 [color "branch"]
