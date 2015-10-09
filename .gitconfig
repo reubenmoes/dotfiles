@@ -33,3 +33,5 @@
 	keepBackup = true
 [merge]
   log = true
+[user]
+	email = reuben@domain7.com
