@@ -27,3 +27,6 @@ if [ -f "${SSH_ENV}" ]; then
 else
      start_agent;
 fi
+
+#Source RVM
+source /Users/reuben/.rvm/scripts/rvm
