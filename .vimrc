@@ -1,32 +1,35 @@
 set nocompatible
-"filetype off
-filetype plugin on
+filetype off
+"filetype plugin on
 
 "https://github.com/tpope/vim-pathogen
 "execute pathogen#infect()
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/Plugin/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+"Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 "My github vundles
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'vim-scripts/loremipsum'
-Bundle 'tmhedberg/matchit'
-Bundle 'tpope/vim-surround'
-Bundle 'msanders/snipmate.vim'
-Bundle 'rstacruz/sparkup'
-Bundle 'sukima/xmledit'
-"Bundle 'scrooloose/nerdcommenter'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/dbext.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/loremipsum'
+Plugin 'tmhedberg/matchit'
+Plugin 'tpope/vim-surround'
+Plugin 'msanders/snipmate.vim'
+Plugin 'rstacruz/sparkup'
+Plugin 'sukima/xmledit'
+"Plugin 'scrooloose/nerdcommenter'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/dbext.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+call vundle#end()
 
 set background=dark
 colorscheme desert
