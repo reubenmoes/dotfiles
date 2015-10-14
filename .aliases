@@ -40,3 +40,5 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres -l logfile stop"
 
 #copykey
 alias sshkey="pbcopy < ~/.ssh/id_rsa.pub && echo 'Copied key to clipboard'"
+
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
