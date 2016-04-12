@@ -13,22 +13,27 @@ call vundle#begin()
 "Plugin 'gmarik/vundle'
 Plugin 'VundleVim/Vundle.vim'
 
-"My github vundles
-"Plugin 'Valloric/YouCompleteMe'
+" "My github vundles
+Plugin 'shime/vim-livedown'
+" "Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/loremipsum'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-surround'
-Plugin 'msanders/snipmate.vim'
+" NOTE: maybe try this one: SirVer/ultisnips
+" Plugin 'msanders/snipmate.vim'
 Plugin 'rstacruz/sparkup'
-Plugin 'sukima/xmledit'
-"Plugin 'scrooloose/nerdcommenter'
+" Plugin 'sukima/xmledit'
+Plugin 'rstacruz/vim-hyperstyle'
+Plugin 'gorodinskiy/vim-coloresque.git'
+" "Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/dbext.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
+" Plugin 'vim-scripts/dbext.vim'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-rails'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
 
 set background=dark
@@ -70,3 +75,28 @@ au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt s
 
 "PHP/HTML
 au BufRead,BufNewFile *.php set ft=php.html
+
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+set undodir=~/.vim/undo
+
+"syntastic things
+" let g:syntastic_twig_twiglint_exec = 'php'
+" let g:syntastic_twig_twiglint_exe = 'php /path/to/twig-lint.phar'
+au BufRead,BufNewFile *.twig        setlocal syntax=jinja
+au BufRead,BufNewFile *.html.twig   setlocal syntax=htmljinja
+
+"remap to move line up and down
+""http://vim.wikia.com/wiki/Moving_lines_up_or_down
+" NOTE: doesn't work
+" nnoremap <Alt-j> :m .+1<CR>==
+" nnoremap <Alt-k> :m .-2<CR>==
+" inoremap <Alt-j> <Esc>:m .+1<CR>==gi
+" inoremap <Alt-k> <Esc>:m .-2<CR>==gi
+" vnoremap <Alt-j> :m '>+1<CR>gv=gv
+" vnoremap <Alt-k> :m '<-2<CR>gv=gv
+
+
+"Use to clean up indentation in scss
+"https://github.com/jlong/sass-convert.vim/blob/master/plugin/sass-convert.vim
+" command! -bang -range=% -nargs=0 CleanScss :<line1>,<line2>!sass-convert --from scss --to scss

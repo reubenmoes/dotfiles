@@ -29,16 +29,22 @@ alias whois="whois -h whois-servers.net"
 # Shortcuts
 alias g="git"
 alias gs="git status"
+alias gd="git diff"
 alias gl="git log"
 alias v="vim"
 
 # File size
 alias fs="stat -f \"%z bytes\""
 
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l logfile start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres -l logfile stop"
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /tmp/pglogfile start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres -l /tmp/pglogfile stop"
 
 #copykey
 alias sshkey="pbcopy < ~/.ssh/id_rsa.pub && echo 'Copied key to clipboard'"
 
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+#Open chrome with no security
+open -a Google\ Chrome --args --disable-web-security -–allow-file-access-from-files
+
+alias acquiamysql="ln -s /Applications/DevDesktop/mysql/data/mysql.sock /tmp/mysql.sock"; 
