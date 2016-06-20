@@ -31,6 +31,12 @@ alias g="git"
 alias gs="git status"
 alias gd="git diff"
 alias gl="git log"
+alias gms="git merge staging"
+alias gmd="git merge develop"
+alias gcs="git checkout staging"
+alias gcm="git checkout master"
+alias gcd="git checkout develop"
+alias gpd="git pull --rebase origin develop"
 alias v="vim"
 
 # File size
@@ -48,3 +54,5 @@ alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resour
 open -a Google\ Chrome --args --disable-web-security -–allow-file-access-from-files
 
 alias acquiamysql="ln -s /Applications/DevDesktop/mysql/data/mysql.sock /tmp/mysql.sock"; 
+
+alias sassyplate="git clone git@github.com:domain7/sassyplate.git .";

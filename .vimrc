@@ -19,6 +19,10 @@ Plugin 'shime/vim-livedown'
 Plugin 'vim-scripts/loremipsum'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-surround'
+
+" NOTE: npm install -g stylefmt
+Plugin 'kewah/vim-stylefmt'
+
 " NOTE: maybe try this one: SirVer/ultisnips
 " Plugin 'msanders/snipmate.vim'
 Plugin 'rstacruz/sparkup'
