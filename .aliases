@@ -37,6 +37,7 @@ alias gcs="git checkout staging"
 alias gcm="git checkout master"
 alias gcd="git checkout develop"
 alias gpd="git pull --rebase origin develop"
+alias gt='cd $(git rev-parse --show-toplevel)'
 alias v="vim"
 
 # File size
@@ -56,3 +57,6 @@ open -a Google\ Chrome --args --disable-web-security -–allow-file-access-from-
 alias acquiamysql="ln -s /Applications/DevDesktop/mysql/data/mysql.sock /tmp/mysql.sock"; 
 
 alias sassyplate="git clone git@github.com:domain7/sassyplate.git .";
+
+#weather!
+alias weather="curl wttr.in"

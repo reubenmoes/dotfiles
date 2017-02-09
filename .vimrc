@@ -20,6 +20,11 @@ Plugin 'vim-scripts/loremipsum'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-surround'
 
+Plugin 'vim-airline/vim-airline'
+
+" PHP sniff
+" Plugin 'bpearson/vim-phpcs'
+
 " NOTE: npm install -g stylefmt
 Plugin 'kewah/vim-stylefmt'
 
@@ -32,6 +37,8 @@ Plugin 'gorodinskiy/vim-coloresque.git'
 " "Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'digitaltoad/vim-pug.git'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'vim-scripts/dbext.vim'
@@ -87,6 +94,16 @@ set undodir=~/.vim/undo
 "syntastic things
 " let g:syntastic_twig_twiglint_exec = 'php'
 " let g:syntastic_twig_twiglint_exe = 'php /path/to/twig-lint.phar'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+
 au BufRead,BufNewFile *.twig        setlocal syntax=jinja
 au BufRead,BufNewFile *.html.twig   setlocal syntax=htmljinja
 
@@ -100,7 +117,10 @@ au BufRead,BufNewFile *.html.twig   setlocal syntax=htmljinja
 " vnoremap <Alt-j> :m '>+1<CR>gv=gv
 " vnoremap <Alt-k> :m '<-2<CR>gv=gv
 
+" vim airline
+set laststatus=2
 
 "Use to clean up indentation in scss
 "https://github.com/jlong/sass-convert.vim/blob/master/plugin/sass-convert.vim
 " command! -bang -range=% -nargs=0 CleanScss :<line1>,<line2>!sass-convert --from scss --to scss
+
