@@ -1,3 +1,11 @@
+# Look in the ./bin directory for any binaries
+# so you don't have to write ./bin/drupal, etc
+export PATH="$PATH:./bin"
+
+# https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks
+source ~/dotfiles/git-completion.bash
+
+
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you donât want to commit
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
@@ -33,7 +41,7 @@ source /Users/reuben/.rvm/scripts/rvm
 
 # Dev Desktop
 # export PATH="/Applications/DevDesktop/mysql/bin:$PATH"
-export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
+#export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
 
 
 # Setting PATH for Python 3.5
@@ -56,4 +64,3 @@ function blt() {
   fi
 }
 
-export PATH="$PATH:/Applications/DevDesktop/tools"

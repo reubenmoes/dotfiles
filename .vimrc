@@ -124,3 +124,9 @@ set laststatus=2
 "https://github.com/jlong/sass-convert.vim/blob/master/plugin/sass-convert.vim
 " command! -bang -range=% -nargs=0 CleanScss :<line1>,<line2>!sass-convert --from scss --to scss
 
+
+" You can use Ctrl-O to remap Ctrl-h/j/k/l to move the cursor while in insert mode without using the arrow keys:
+imap <C-h> <C-o>h
+imap <C-j> <C-o>j
+imap <C-k> <C-o>k
+imap <C-l> <C-o>l
